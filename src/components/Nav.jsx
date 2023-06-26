@@ -21,7 +21,7 @@ const Nav = () => {
       <nav
         className={`fixed top-0 left-0 w-full bg-slate-900 shadow-lg z-50 ${
           Scroleando
-            ? "bg-opacity-50 opacity-20 transition duration-500 ease-in-out"
+            ? "bg-opacity-100 opacity-50 transition duration-500 ease-in-out"
             : "bg-opacity-100 transition duration-500 ease-in-out"
         }`}>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
