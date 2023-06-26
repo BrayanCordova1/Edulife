@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "datasCursoId": {
+      "Modulos:": {
+        "Modulo1": {
+          "titulo": "Introducción al HTML5",
+          "tema1": {
+            "titulo": "HTML5: La estructura de la web moderna",
+            "header": "¡Descubre la potencia de HTML5 y aprende a crear páginas web modernas con esta tecnología fundamental para el desarrollo web! Exploraremos su estructura y su importancia en la creación de sitios web accesibles y atractivos visualmente.",
+            "video": "https://www.youtube.com/embed/kIMgLOFAExg",
+            "text": "HTML5 es la última versión del lenguaje de marcado estándar utilizado para crear y estructurar el contenido de las páginas web. Es fundamental para la construcción de sitios web, ya que permite una mejor representación de contenido multimedia y aplicaciones interactivas en el navegador sin necesidad de plugins externos. Una de sus características destacadas es su capacidad para adaptarse a diferentes dispositivos, como computadoras, tablets y smartphones, mediante etiquetas semánticas que mejoran la indexación y accesibilidad web. Además, HTML5 es compatible con CSS3 y JavaScript, lo que permite crear páginas web dinámicas y atractivas con estilos sofisticados y funcionalidad avanzada. Estas tres tecnologías se complementan entre sí para brindar una experiencia de usuario enriquecedora.",
+            "sombreado": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\">\n    <title>Título de la página</title>\n    <style>\n      h1 {\n        color: blue;\n      }\n      p {\n        font-size: 16px;\n      }\n    </style>\n    <script>\n      function mostrarMensaje() {\n        alert('¡Hola, mundo!');\n      }\n    </script>\n  </head>\n  <body>\n    <h1 onclick=\"mostrarMensaje()\">Haz clic aquí</h1>\n    <p>Este es un párrafo con estilo personalizado.</p>\n  </body>\n</html>"
+          },
+          "tema2": {
+            "titulo": "Sintaxis de HTML",
+            "header": "La sintaxis de HTML es fundamental para crear páginas web. HTML, que significa HyperText Markup Language (Lenguaje de Marcado de Hipertexto), es el lenguaje estándar utilizado para estructurar y presentar el contenido en la web. En esta lección, aprenderemos las etiquetas básicas de HTML y algunos atributos esenciales para comenzar a construir páginas web.",
+            "video": "https://www.youtube.com/embed/HBSB4WhBYYU",
+            "text": "HTML es un lenguaje basado en etiquetas utilizado para estructurar el contenido de una página web. Las etiquetas se definen con corchetes angulares y se dividen en secciones principales: <head> y <body>. El <head> contiene información del encabezado, como el título de la página. El <body> contiene el contenido visible de la página, donde se utilizan etiquetas como <h1> para encabezados, <p> para párrafos y <a> para enlaces. HTML también tiene etiquetas y atributos adicionales para insertar imágenes, crear listas y formularios. Es importante seguir las reglas de sintaxis de HTML, cerrando adecuadamente las etiquetas. Con este conocimiento, puedes comenzar a crear tus propias páginas web. ¡Diviértete construyendo!",
+            "sombreado": "<html>\n  <head>\n    <title>Título de la página</title>\n  </head>\n  <body>\n    <h1>Título principal</h1>\n    <p>Este es un párrafo de texto.</p>\n    <h1>Título principal</h1>\n    <h2>Título principal</h2>\n    <h3>Título principal</h3>\n    <h4>Título principal</h4>\n    <h5>Título principal</h5>\n    <h6>Título principal</h6>\n    <p>Este es un párrafo de texto.</p>\n    <a href=\"https://www.ejemplo.com\">Enlace</a>\n    <img src=\"imagen.jpg\" alt=\"Descripción de la imagen\">\n    <ul>\n      <li>Elemento de lista 1</li>\n      <li>Elemento de lista 2</li>\n    </ul>\n    <form>\n      <!-- Elementos del formulario aquí -->\n    </form>\n    <p>Este es un párrafo.<br>\n    Este es otro párrafo.</p>\n    <img src=\"imagen.jpg\" alt=\"Descripción de la imagen\">\n  </body>\n</html>"
+          }
+        },
+        "Modulo2": {
+          "titulo": "Imágenes y multimedia",
+          "tema1": {
+            "titulo": "Inserción de imágenes (atributos src, alt, width, height)",
+            "header": "En este tema aprenderemos cómo insertar imágenes en una página web utilizando HTML5. Las imágenes son elementos visuales clave que ayudan a mejorar la apariencia y la experiencia del usuario en un sitio web. Veremos cómo utilizar los atributos src, alt, width y height para especificar la ubicación de la imagen, proporcionar texto alternativo y controlar el tamaño de la imagen.",
+            "video": "https://www.youtube.com/embed/tEilT0t86oY",
+            "text": "Al insertar una imagen en una página HTML, utilizamos la etiqueta <img>. Esta etiqueta es de autocierre y requiere el atributo src, que indica la ruta de la imagen. Es importante incluir el atributo alt para proporcionar un texto alternativo en caso de que la imagen no se cargue correctamente. Los atributos width y height permiten especificar el tamaño de la imagen en píxeles, manteniendo la proporción original si se especifica solo uno de ellos. También se pueden utilizar unidades relativas como porcentaje o em para ajustar el tamaño de la imagen. Es recomendable optimizar las imágenes antes de utilizarlas en una página web para reducir el tamaño de archivo y respetar los derechos de autor.",
+            "sombreado": "<img src=\"ruta_de_la_imagen.jpg\">\n<img src=\"ruta_de_la_imagen.jpg\" alt=\"Descripción de la imagen\">\n<img src=\"ruta_de_la_imagen.jpg\" alt=\"Descripción de la imagen\" width=\"400\" height=\"300\">\n<img src=\"ruta_de_la_imagen.jpg\" alt=\"Descripción de la imagen\" width=\"50%\" height=\"auto\">"
+          },
+          "tema2": {
+            "titulo": "Audio y video en HTML5 (etiquetas <audio> y <video>)",
+            "header": "En este tema, exploraremos cómo incorporar audio y video en una página web utilizando las etiquetas <audio> y <video> de HTML5. Estas etiquetas permiten la reproducción de contenido multimedia directamente en el navegador, sin necesidad de complementos externos como Flash. Aprenderemos sobre los atributos clave de estas etiquetas y algunos consejos útiles para trabajar con audio y video en HTML5.",
+
+            "text": "La etiqueta <audio> se utiliza para insertar audio en una página web, especificando la fuente con el atributo 'src'. Se pueden agregar etiquetas <source> para proporcionar alternativas en caso de incompatibilidad. La etiqueta <video> se usa para insertar videos, con la posibilidad de especificar múltiples formatos usando etiquetas <source>. Los atributos 'controls' y 'autoplay' agregan controles de reproducción y permiten la reproducción automática. El atributo 'poster' permite mostrar una imagen de portada para el video. Hay otros atributos disponibles, como 'loop', 'preload' y 'muted', para personalizar la reproducción. Es importante considerar la accesibilidad al proporcionar alternativas de texto con la etiqueta <track> y optimizar el tamaño y formato de los archivos multimedia para mejorar la experiencia del usuario.",
+
+            "sombreado": "<source src='audio.ogg' type='audio/ogg'>\n Tu navegador no soporta el elemento de audio.\n</audio>\n <source src='video.mp4' type='video/mp4'>\n<video controls  src='video.mp4' type='video/mp4'>\n Tu navegador no soporta el elemento de video.\n</video>"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "datasCursoId": {
+      "Modulos:": {
+        "Modulo1": {
+          "titulo": "Introducción a CSS3",
+          "tema1": {
+            "titulo": "CSS3: Los estilos de la vida",
+            "header": "CSS3: El lenguaje de estilo que transforma la apariencia de los sitios web. Aprende a dar vida a tus páginas web con este curso introductorio donde exploraremos las poderosas capacidades de CSS3 y cómo puedes utilizarlas para crear diseños atractivos y modernos.",
+            "video": "https://www.youtube.com/embed/PkMQ6iRDuhE",
+            "text": "CSS3 es el lenguaje de hojas de estilo en cascada utilizado para diseñar y dar estilo a páginas web. Con una amplia gama de herramientas y características, como personalización de colores, fuentes, tamaños y animaciones, CSS3 lleva el diseño web a un nivel avanzado. Antes de CSS, los estilos se definían en el código HTML, lo que generaba páginas pesadas y difíciles de mantener. Sin embargo, con la introducción de CSS en 1996, los desarrolladores pudieron separar la apariencia visual de la estructura, lo que permitió una mayor flexibilidad y eficiencia en el diseño web.",
+            "sombreado": "body {\n font-family: Arial, sans-serif;\n background-color: #f2f2f2;\n}\n\n.container {\n width: 960px;\n margin: 0 auto;\n padding: 20px;\n}\n\nh1 {\n color: #333333;\n font-size: 24px;\n margin-bottom: 10px;\n}\n\np {\n color: #666666;\n font-size: 16px;\n line-height: 1.5;\n}"
+          },
+          "tema2": {
+            "titulo": "Selectores CSS",
+            "header": "Los selectores CSS son una parte fundamental para dar estilo a los elementos HTML. Con los selectores CSS, puedes seleccionar y aplicar estilos específicos a uno o varios elementos en tu página web. En este tema, aprenderemos sobre diferentes tipos de selectores CSS y cómo utilizarlos para personalizar tus elementos HTML.",
+
+            "text": "Los selectores CSS son herramientas poderosas que permiten dar estilo a los elementos HTML de manera precisa. Una regla CSS consta de un selector y un bloque de declaraciones. El selector indica qué elementos se deben estilizar, como el selector de etiqueta que selecciona todos los elementos de un tipo específico. También existen otros selectores como el de clase, que selecciona elementos con un atributo de clase específico, y el de ID, que selecciona un elemento con un atributo de ID único. Además, hay selectores más avanzados como el de descendiente, atributo y pseudo-clase. Al comprender y utilizar estos selectores, se puede personalizar completamente el aspecto de una página web.",
+
+            "sombreado": "\nHTML:\n<html>\n<head>\n<title>Document</title>\n<body>\n<p>Hola soy un parrafo</p>\n</body>\n</html>\nCSS:\np {\n color: blue;\n font-size: 16px;\n font-family: Arial, sans-serif;\n\n}\n\nHTML:\n<p class=\"destacado\">Hola soy un parrafo</p>\nCSS:\n.destacado {\n background-color: yellow;\n border: 1px solid black;\n}\n\nHTML:\n<p id=\"encabezado\">Hola soy un parrafo</p>\nCSS:\n#encabezado {\n text-align: center;\n font-weight: bold;\n}\n\nHTML:\n<div class=\"contenedor\">\n<p>Hola soy un parrafo</p>\n</div>\nCSS:\n/* Selector de descendiente /\n\n.contenedor p {\n color: red;\n}\nHTML:\n<a href=\"https://www.ejemplo.com\">Hola soy un parrafo</a>\nCSS:\n/ Selector de atributo /\n\na[href='https://www.ejemplo.com'] {\n text-decoration: none;\n}\n"
+          }
+        },
+        "Modulo2": {
+          "titulo": "Colores y textos",
+          "tema1": {
+            "titulo": "Colores de CSS",
+            "header": "Los colores desempeñan un papel fundamental en el diseño web. En CSS, podemos especificar colores de diversas formas y utilizar una amplia gama de opciones para lograr el aspecto deseado. En este tema, exploraremos cómo elegir colores y utilizar la notación hexadecimal en CSS para definirlos. Aprenderemos algunos consejos útiles para trabajar con colores y cómo aplicarlos en nuestros estilos CSS.",
+            "video": "https://www.youtube.com/embed/1jg5FNsAtBg",
+
+            "text": "La elección de colores en CSS es crucial para la apariencia y legibilidad de un sitio web. La notación hexadecimal es una forma común de seleccionar colores, representando combinaciones de números y letras. Por ejemplo, #FFFFFF es blanco y #000000 es negro. Esta notación utiliza los dos primeros caracteres para el rojo, los dos siguientes para el verde y los dos últimos para el azul. Además de la notación hexadecimal, CSS admite otros formatos de color, como los nombres predefinidos. Sin embargo, la notación hexadecimal es ampliamente utilizada debido a su flexibilidad, compatibilidad y precisión en la especificación de colores personalizados.",
+
+            "sombreado": "/* Podemos usar la notación hexadecimal en CSS */\n\n.selector {\n  color: #FF0000;\n  background-color: #00FF00;\n}\n\n/* También podemos usar nombres de color predefinidos */\n\n.selector2 {\n  color: red;\n  background-color: green;\n} \n\n/* Los colores en CSS pueden ser representados usando notación hexadecimal */\n\n.selector {\n  color: #FF0000; /* Rojo */\n  background-color: #00FF00; /* Verde */\n  border-color: #0000FF; /* Azul */\n}\n\n/* También podemos usar nombres de color predefinidos */\n\n.selector2 {\n  color: red;\n  background-color: green;\n  border-color: blue;\n}"
+          },
+          "tema2": {
+            "titulo": "Textos de CSS",
+            "header": "En este tema aprenderemos sobre los textos en CSS, incluyendo los tipos de texto, tamaños de texto y cómo cambiar su estilo.",
+            "video": "https://www.youtube.com/embed/JvOdqWlZq6c",
+            "text": "El texto es una parte fundamental de cualquier sitio web y en CSS existen diferentes formas de dar estilo y estructura al texto. El selector de texto básico permite aplicar estilos a todo el texto dentro de un elemento específico, como cambiar el color, tamaño de fuente y espaciado entre letras. También se pueden utilizar selectores más específicos, como el de clase o ID, para estilizar partes específicas del texto. En cuanto a los tamaños de texto, CSS ofrece diferentes unidades de medida como píxeles, porcentajes o em, lo que permite ajustar el tamaño del texto para adaptarse a diferentes dispositivos o crear efectos visuales interesantes. Además del tamaño de fuente, también se puede ajustar el espaciado entre líneas y los márgenes alrededor del texto. Por último, CSS proporciona una amplia gama de propiedades para cambiar el estilo del texto, como la selección de la fuente con font-family, aplicar negrita o cursiva con font-weight y font-style, y agregar subrayados o líneas a través de text-decoration. También se pueden controlar la alineación del texto, el espaciado entre palabras y letras, entre otras opciones.",
+            "sombreado": "/* Cambiar el color del texto */\nselector {\n  color: #ff0000;\n}\n\n/* Cambiar el tamaño de la fuente */\nselector {\n  font-size: 16px;\n}\n\n/* Cambiar el espaciado entre letras */\nselector {\n  letter-spacing: 2px;\n}\n\n/* Utilizar un selector de clase */\n.clase {\n  color: #00ff00;\n}\n\n/* Utilizar un selector de ID */\n#id {\n  font-weight: bold;\n}\n\n/* Especificar el tamaño de la fuente en píxeles */\nselector {\n  font-size: 12px;\n}\n\n/* Especificar el tamaño de la fuente en porcentaje */\nselector {\n  font-size: 120%;\n}\n\n/* Especificar el tamaño de la fuente en em */\nselector {\n  font-size: 1.5em;\n}\n\n/* Cambiar la fuente del texto */\nselector {\n  font-family: Arial, sans-serif;\n}\n\n/* Aplicar negrita */\nselector {\n  font-weight: bold;\n}\n\n/* Aplicar cursiva */\nselector {\n  font-style: italic;\n}"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 3,
+    "datasCursoId": {
+      "Modulos:": {
+        "Modulo1": {
+          "titulo": "Introducción a JavaScript",
+          "tema1": {
+            "titulo": "El cerebro de las pagina web",
+            "header": "JavaScript es un lenguaje de programación ampliamente utilizado en el desarrollo web. En esta lección, aprenderemos los conceptos básicos de JavaScript, cómo enlazarlo con HTML y exploraremos un poco de su historia.",
+            "video": "https://www.youtube.com/embed/IIj-EkEx6Lw",
+            "text": "JavaScript es un lenguaje de programación de alto nivel utilizado para crear interactividad en sitios web. Es compatible con todos los navegadores modernos y se ejecuta en el lado del cliente. Permite que las páginas web respondan a las acciones del usuario y realicen cambios dinámicos sin recargar la página. Para trabajar con JavaScript, se enlaza con HTML utilizando la etiqueta <script>. El código JavaScript puede estar dentro de las etiquetas <script> o enlazarse desde un archivo externo utilizando el atributo src. Fue creado por Brendan Eich en 1995 y ha evolucionado significativamente desde entonces. Se utiliza en el desarrollo web, aplicaciones móviles y servidores. Existen bibliotecas y frameworks populares que facilitan la escritura de código JavaScript, como jQuery, AngularJS y React. JavaScript es fundamental en el desarrollo web y se aprenderán más conceptos en las próximas lecciones.",
+            "sombreado": "<script src=\"script.js\"></script>"
+          },
+          "tema2": {
+            "titulo": "Variables de JavaScript",
+            "header": "Las variables en JavaScript son contenedores para almacenar valores. Cada variable tiene un nombre único y se le asigna un valor específico. En JavaScript, existen varios tipos de variables que se utilizan para diferentes propósitos. Aprender a trabajar con variables es fundamental para programar en JavaScript de manera efectiva.",
+            "text": "En JavaScript, existen diferentes tipos de variables para almacenar distintos tipos de datos. Los principales son las variables de tipo String, Number, Boolean, Array y Object. Estos tipos de variables permiten almacenar texto, valores numéricos, estados lógicos, conjuntos de valores y conjuntos de datos relacionados respectivamente. A medida que aprendas más sobre JavaScript, descubrirás cómo utilizar estas variables para construir programas más complejos y dinámicos.",
+            "sombreado": "var nombre = 'Juan';\nvar apellido = \"Pérez\";\n\nvar edad = 25;\nvar precio = 19.99;\n\nvar esMayorDeEdad = true;\nvar tieneDescuento = false;\n\nvar colores = ['rojo', 'verde', 'azul'];\nvar numeros = [1, 2, 3, 4, 5];\n\nvar persona = {\n  nombre: 'Ana',\n  edad: 30,\n  ciudad: 'Madrid'\n};"
+          }
+        },
+        "Modulo2": {
+          "titulo": "Funciones y  Consola",
+          "tema1": {
+            "titulo": "Consola en JavaScript",
+            "header": "La consola en JavaScript es una herramienta invaluable para los programadores, ya que nos permite interactuar con el código y ver los resultados de forma instantánea. En este tema, exploraremos las funciones básicas que puedes usar en la consola, así como la forma de imprimir datos y realizar programación básica en este entorno.",
+            "video": "https://www.youtube.com/embed/LRyHerlH3bc",
+            "text": "La consola en JavaScript es una interfaz de línea de comandos que permite ejecutar código y ver los resultados en tiempo real. Puedes abrirla en tu navegador presionando F12 y seleccionando la pestaña 'Consola'. La función console.log() es muy utilizada para imprimir mensajes, valores de variables y resultados de operaciones. Además de console.log(), existen otras funciones útiles en la consola de JavaScript, como las funciones para mostrar advertencias, errores, limpiar la consola y medir el tiempo de ejecución. La consola es una herramienta poderosa para comprender y depurar el código. Experimenta y diviértete programando en la consola de JavaScript.",
+            "sombreado": "// Ejemplo de código en la consola\n\n// Imprimir un mensaje en la consola\nconsole.log('Hola, mundo!') //Output: \"Hola, mundo!\";\n\n// Realizar cálculos y mostrar el resultado\nconsole.log(2 + 2) //Output: 4;\n\n// Asignar valores a variables\nvar nombre = 'Juan';\nconsole.log(nombre) //Output: \"Juan\";\n\n// Realizar operaciones con variables\nvar numero1 = 5;\nvar numero2 = 3;\nvar resultado = numero1 * numero2;\nconsole.log(resultado) //Output: 15; \n\n// Mostrar un mensaje de advertencia\nconsole.warn('¡Cuidado! Este es un mensaje de advertencia.');\n\n// Mostrar un mensaje de error\nconsole.error('¡Error! Algo salió mal.');\n\n// Limpiar la consola\nconsole.clear();\n\n// Medir el tiempo de ejecución de un bloque de código\nconsole.time('Tiempo de ejecución');\n// Bloque de código a medir\nconsole.timeEnd('Tiempo de ejecución');"
+          },
+          "tema2": {
+            "titulo": "Funciones en JavaScript",
+            "header": "Las funciones son bloques de código reutilizables que realizan tareas específicas en JavaScript. Son una parte fundamental de cualquier programa y permiten organizar y modularizar el código. En este tema, exploraremos las funciones en JavaScript, tanto aquellas que reciben parámetros como las que no. Aprenderemos cómo definir y llamar funciones, así como algunos consejos útiles para utilizarlas de manera efectiva en nuestros programas.",
+            "video": "https://www.youtube.com/embed/-cyjuQJjOfg",
+            "text": "Una función en JavaScript es un bloque de código que realiza una tarea específica. Puede tomar parámetros y devolver un resultado utilizando la palabra clave 'return'. Para llamar a una función, se utiliza su nombre seguido de paréntesis y se proporcionan los valores de entrada si es necesario. Las funciones pueden ser llamadas sin parámetros también. Al utilizar funciones, es importante seguir buenas prácticas como nombrarlas de manera descriptiva, utilizar comentarios para explicar su propósito, reutilizar funciones y evitar la duplicación de código. Las funciones son una herramienta poderosa en JavaScript para escribir código modular y reutilizable. Con práctica y experiencia, se pueden crear programas más eficientes y fáciles de mantener. Ahora es tu turno de experimentar y divertirte programando con funciones en JavaScript.",
+            "sombreado": "function nombreDeLaFuncion(parametro1, parametro2) {\n // Código a ejecutar\n}\n\nfunction saludar(nombre) {\n console.log('¡Hola, ' + nombre + '!');\n}\n\nsaludar('Juan'); // Output: ¡Hola, Juan!\n\nfunction sumar(a, b) {\n return a + b;\n}\n\nvar resultado = sumar(2, 3);\nconsole.log(resultado); // Output: 5\n\nfunction saludar() {\n console.log('¡Hola, mundo!');\n}\n\nsaludar(); // Output: ¡Hola, mundo!"
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,6 +1,6 @@
 import React from "react";
 import { CursoCarta } from "../../components/Cards";
-import Datacursos from "./Cursos.json";
+import Datacursos from "./CursosGeneral.json";
 
 export const Cursospage = () => {
   return (

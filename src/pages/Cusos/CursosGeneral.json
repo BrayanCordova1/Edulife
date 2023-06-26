@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Aprende HTML Basico",
+    "description": "Domina el lenguaje de marcado para construir sitios web",
+    "image": "/curso_html.png"
+  },
+  {
+    "id": 2,
+    "name": "Domina CSS Basico",
+    "description": "Aprende a dar estilo y diseño a tus sitios web",
+    "image": "/curso_css.png"
+  },
+  {
+    "id": 3,
+    "name": "Conoce JavaScript Basico",
+    "description": "Descubre el lenguaje de programación más popular del mundo web",
+    "image": "/curso_javascript.png"
+  }
+]

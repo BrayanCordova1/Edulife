@@ -2,29 +2,25 @@ import React, { useState, useEffect } from "react";
 import { NavLink, BrowserRouter as Router } from "react-router-dom";
 
 const Nav = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [Scroleando, SetScroleando] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
-        setIsScrolled(true);
+        SetScroleando(true);
       } else {
-        setIsScrolled(false);
+        SetScroleando(false);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
   return (
     <Router>
       <nav
         className={`fixed top-0 left-0 w-full bg-slate-900 shadow-lg z-50 ${
-          isScrolled
+          Scroleando
             ? "bg-opacity-50 opacity-20 transition duration-500 ease-in-out"
             : "bg-opacity-100 transition duration-500 ease-in-out"
         }`}>
@@ -41,18 +37,23 @@ const Nav = () => {
             <div>
               <div className='ml-10 flex items-center space-x-10 '>
                 <NavLink
-                  to='/'
-                  reloadDocument={true}
-                  className='text-gray-500 hover:text-white transition duration-300 ease-in-out'>
-                  Blog
-                </NavLink>
-                <NavLink
                   to='/cursos'
                   reloadDocument={true}
                   className='text-gray-500 hover:text-white transition duration-300 ease-in-out'>
                   Cursos
                 </NavLink>
-
+                <NavLink
+                  to='/blog'
+                  reloadDocument={true}
+                  className='text-gray-500 hover:text-white transition duration-300 ease-in-out'>
+                  Blog
+                </NavLink>
+                <NavLink
+                  to='/contacto'
+                  reloadDocument={true}
+                  className='text-gray-500 hover:text-white transition duration-300 ease-in-out'>
+                  Contacto
+                </NavLink>
                 <NavLink
                   to='/'
                   reloadDocument={true}

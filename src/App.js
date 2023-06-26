@@ -6,6 +6,8 @@ import { Privacidad } from "./pages/TerminosCondiciones/Privacidad";
 import { NotFound } from "./pages/NotFound";
 import { Cursospage } from "./pages/Cusos/Cursospage";
 import { Curso } from "./pages/Cusos/Curso";
+import { Contacto } from "./pages/Contacto";
+import { Blog } from "./pages/Blog";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path='/privacidad' element={<Privacidad />} />
         <Route path='/cursos*' element={<Cursospage />} />
         <Route path='/cursos/:cursoid' element={<Curso />} />
+        <Route path='/contacto' element={<Contacto />} />
+        <Route path='/blog' element={<Blog />} />
       </Routes>
     </BrowserRouter>
   );

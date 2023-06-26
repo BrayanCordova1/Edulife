@@ -4,11 +4,11 @@ import { NavLink } from "react-router-dom";
 import {
   BsFillLightningChargeFill,
   BsFillGrid1X2Fill,
-  BsFillHeartFill,
   BsChatDotsFill,
-  BsFillBarChartLineFill,
   BsFillChatSquareHeartFill,
   BsFillFileEarmarkTextFill,
+  BsFillBookmarkCheckFill,
+  BsFillBookFill,
 } from "react-icons/bs";
 import { motion } from "framer-motion";
 
@@ -16,8 +16,8 @@ export function Features({ titulo, descripcion, icono }) {
   let iconComponent;
 
   switch (icono) {
-    case "corazon":
-      iconComponent = <BsFillHeartFill />;
+    case "lineas":
+      iconComponent = <BsFillBookmarkCheckFill />;
       break;
     case "rapidez":
       iconComponent = <BsFillLightningChargeFill />;
@@ -28,8 +28,8 @@ export function Features({ titulo, descripcion, icono }) {
     case "chat":
       iconComponent = <BsChatDotsFill />;
       break;
-    case "barline":
-      iconComponent = <BsFillBarChartLineFill />;
+    case "book":
+      iconComponent = <BsFillBookFill />;
       break;
     case "chatcorazon":
       iconComponent = <BsFillChatSquareHeartFill />;

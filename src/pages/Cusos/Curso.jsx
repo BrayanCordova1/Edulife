@@ -1,50 +1,51 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import Datacursos from "./Cursos.json";
+import Cursos from "./CursosGeneral.json";
+import CursosData from "./CursosData/CursosData.json";
 
 export const Curso = () => {
-  const params = useParams();
-  const cursoId = parseInt(params.cursoid, 10);
-  const curso = Datacursos.find((curso) => curso.id === cursoId);
+  const parametros = useParams();
+  const cursoId = parseInt(parametros.cursoid, 10);
+  const CursoGeneral = Cursos.find((cursogeneral) => cursogeneral.id === cursoId);
+  const CurData = CursosData.find((cursogeneral) => cursogeneral.id === cursoId);
 
-  if (!curso) {
+  if (!CursoGeneral) {
     return <h1>Error 404: Curso no encontrado</h1>;
   }
 
-  const modulos = curso.datasCursoId["Modulos:"];
-  const [visibleModule, setVisibleModule] = useState(null);
-  const [selectedTema, setSelectedTema] = useState(null);
+  const modulos = CurData.datasCursoId["Modulos:"];
+  const [moduloVisible, setmoduloVisible] = useState(null);
+  const [temaSeleccionado, settemaSeleccionado] = useState(null);
 
-  const handleModuleClick = (moduleKey) => {
-    if (visibleModule === moduleKey) {
-      setVisibleModule(null);
+  const handleModuloClick = (moduloKey) => {
+    if (moduloVisible === moduloKey) {
+      setmoduloVisible(null);
     } else {
-      setVisibleModule(moduleKey);
-      setSelectedTema(null);
+      setmoduloVisible(moduloKey);
+      settemaSeleccionado(null);
     }
   };
 
   const handleTemaClick = (temaKey) => {
-    setSelectedTema(temaKey);
+    settemaSeleccionado(temaKey);
   };
-
   return (
     <div>
-      <h1 className='text-3xl font-bold ml-7 mt-8'>Bienvenido al curso: {curso.name} </h1>
-      <h1 className='text-xl ml-7 my-5 mb-7'>{curso.description} </h1>
+      <h1 className='text-3xl font-bold ml-7 mt-8'>Bienvenido al curso: {CursoGeneral.name} </h1>
+      <h1 className='text-xl ml-7 my-5 mb-7'>{CursoGeneral.description} </h1>
       <div className='grid grid-cols-4'>
         <div className='px-2 py-1 rounded-xl relative w-72 h-auto ml-5 bg-slate-950 bg-opacity-40 pb-8'>
           {Object.entries(modulos).map(([moduloKey, modulo]) => (
             <div key={moduloKey}>
               <h1
                 className='bg-slate-950 text-base text-white p-3 rounded-xl mt-6 duration-700 hover:bg-slate-200 hover:text-black hover:text-lg cursor-pointer'
-                onClick={() => handleModuleClick(moduloKey)}>
+                onClick={() => handleModuloClick(moduloKey)}>
                 {modulo.titulo}
               </h1>
               <div
                 className={`${
-                  visibleModule === moduloKey ? "block" : "hidden"
+                  moduloVisible === moduloKey ? "block" : "hidden"
                 } transition-all duration-300 ease-in-out`}>
                 {Object.entries(modulo)
                   .slice(1)
@@ -52,7 +53,7 @@ export const Curso = () => {
                     <div
                       key={temaKey}
                       className={`bg-slate-700 text-sm text-white p-3 rounded-xl my-1 duration-700 hover:bg-slate-500 ${
-                        selectedTema === temaKey ? "bg-slate-500" : ""
+                        temaSeleccionado === temaKey ? "bg-slate-800" : "bg-slate-500 "
                       }`}
                       onClick={() => handleTemaClick(temaKey)}>
                       <h1>{tema.titulo}</h1>
@@ -64,45 +65,30 @@ export const Curso = () => {
         </div>
 
         {Object.entries(modulos).map(([moduloKey, modulo]) =>
-          Object.entries(modulo)
-            .slice(1)
-            .map(([temaKey, tema]) => (
-              <div
-                className={`bg-slate-900  bg-opacity-20 ml-0 relative mr-4 rounded-2xl px-6 py-4 col-span-3 ${
-                  selectedTema === temaKey && visibleModule === moduloKey ? "block" : "hidden"
-                }`}
-                key={temaKey}>
-                <h1 className='text-4xl mb-6'>{tema.titulo}</h1>
-                <h4 className='mb-2'>{tema.header}</h4>
-                {tema.video && <iframe width='560' height='315' src={tema.video} title='Video del tema'></iframe>}
-                {[...Array(15).keys()].map((index) => {
-                  const textKey = `text${index + 1}`;
-                  const sombreadoKey = `sombreado${index + 1}`;
-                  const textLines = tema[textKey] ? tema[textKey].split("\n") : [];
-                  const sombreadoLines = tema[sombreadoKey] ? tema[sombreadoKey].split("\n") : [];
+          Object.entries(modulo).map(([temaKey, tema]) => (
+            <div
+              className={`bg-slate-900  bg-opacity-20 ml-0 relative mr-4 rounded-2xl px-6 py-4 col-span-3 ${
+                temaSeleccionado === temaKey && moduloVisible === moduloKey ? "block" : "hidden"
+              }`}
+              key={temaKey}>
+              <h1 className='text-4xl mb-6'>{tema.titulo}</h1>
+              <h4 className='mb-2'>{tema.header}</h4>
+              {tema.video && <iframe width='560' height='315' src={tema.video} title='Video del tema'></iframe>}
 
-                  return (
-                    <React.Fragment key={index}>
-                      {textLines.length > 0 && (
-                        <div className='mt-4'>
-                          {textLines.map((line, lineIndex) => (
-                            <p key={lineIndex}>{line}</p>
-                          ))}
-                        </div>
-                      )}
-
-                      {sombreadoLines.length > 0 && (
-                        <div className='bg-slate-900 bg-opacity-50 p-4 m-2 text-blue-400'>
-                          {sombreadoLines.map((line, lineIndex) => (
-                            <p key={lineIndex}>{line}</p>
-                          ))}
-                        </div>
-                      )}
-                    </React.Fragment>
-                  );
-                })}
-              </div>
-            )),
+              {tema.text && <p className='my-6'>{tema.text}</p>}
+              <h1>Ejemplos:</h1>
+              {tema.sombreado && (
+                <p className='mb-2  bg-opacity-70 bg-slate-950 p-2 rounded-lg'>
+                  {tema.sombreado.split("\n").map((linea, index) => (
+                    <h6 key={index}>
+                      {linea}
+                      <br />
+                    </h6>
+                  ))}
+                </p>
+              )}
+            </div>
+          )),
         )}
       </div>
     </div>
