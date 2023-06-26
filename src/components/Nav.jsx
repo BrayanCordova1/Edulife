@@ -30,7 +30,7 @@ const Nav = () => {
               <NavLink
                 to='/'
                 reloadDocument={true}
-                className='font-bold text-gray-500 hover:text-white transition duration-300 ease-in-out'>
+                className='font-bold text-gray-500 hover:text-white hover:opacity-100 transition duration-300 ease-in-out'>
                 EduLife
               </NavLink>
             </div>
@@ -39,25 +39,31 @@ const Nav = () => {
                 <NavLink
                   to='/cursos'
                   reloadDocument={true}
-                  className='text-gray-500 hover:text-white transition duration-300 ease-in-out'>
+                  className='text-gray-500 hover:text-white hover:opacity-100 transition duration-300 ease-in-out'>
                   Cursos
                 </NavLink>
                 <NavLink
                   to='/blog'
                   reloadDocument={true}
-                  className='text-gray-500 hover:text-white transition duration-300 ease-in-out'>
+                  className='text-gray-500 hover:text-white hover:opacity-100 transition duration-300 ease-in-out'>
                   Blog
                 </NavLink>
                 <NavLink
                   to='/contacto'
                   reloadDocument={true}
-                  className='text-gray-500 hover:text-white transition duration-300 ease-in-out'>
+                  className='text-gray-500 hover:text-white hover:opacity-100 transition duration-300 ease-in-out'>
                   Contacto
+                </NavLink>
+                <NavLink
+                  to='/eventos'
+                  reloadDocument={true}
+                  className='text-gray-500 hover:text-white hover:opacity-100 transition duration-300 ease-in-out'>
+                  Eventos
                 </NavLink>
                 <NavLink
                   to='/'
                   reloadDocument={true}
-                  className='text-gray-500 hover:text-white transition duration-300 ease-in-out'>
+                  className='text-gray-500 hover:text-white hover:opacity-100 transition duration-300 ease-in-out'>
                   Inicio
                 </NavLink>
               </div>

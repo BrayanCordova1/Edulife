@@ -8,6 +8,7 @@ import { Cursospage } from "./pages/Cusos/Cursospage";
 import { Curso } from "./pages/Cusos/Curso";
 import { Contacto } from "./pages/Contacto";
 import { Blog } from "./pages/Blog";
+import { Eventos } from "./pages/Eventos";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/cursos*' element={<Cursospage />} />
         <Route path='/cursos/:cursoid' element={<Curso />} />
         <Route path='/contacto' element={<Contacto />} />
+        <Route path='/eventos' element={<Eventos />} />
         <Route path='/blog' element={<Blog />} />
       </Routes>
     </BrowserRouter>

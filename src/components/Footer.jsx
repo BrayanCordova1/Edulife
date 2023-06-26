@@ -1,12 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { BsFacebook, BsInstagram, BsTwitter, BsDiscord } from "react-icons/bs";
 
 const Footer = () => {
   return (
     <Router>
       <footer className='bg-gray-900 relative mt-20 bg-opacity-30'>
-        <div className='max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 grid grid-cols-2'>
+        <div className='max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 grid grid-cols-3'>
           <div className='space-x-6'>
             <h1>Términos y Condiciones</h1>
             <ul>
@@ -32,6 +33,55 @@ const Footer = () => {
                   reloadDocument={true}
                   className='text-gray-400 hover:text-white transition duration-300 ease-in-out transform hover:scale-125'>
                   Políticas de Privacidad
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+          <div className='space-x-6'>
+            <h1>Redes sociales</h1>
+            <ul>
+              <li>
+                <Link
+                  to='/avisolegal'
+                  reloadDocument={true}
+                  className='text-gray-400 hover:text-white transition duration-300 ease-in-out transform hover:scale-125'>
+                  <span className='inline-block align-middle mr-2'>
+                    <BsFacebook />
+                  </span>
+                  Facebook
+                </Link>
+              </li>
+              <li>
+                <NavLink
+                  to='/politicadecookies'
+                  reloadDocument={true}
+                  className='text-gray-400 hover:text-white transition duration-300 ease-in-out transform hover:scale-125'>
+                  <span className='inline-block align-middle mr-2'>
+                    <BsInstagram />
+                  </span>
+                  Instagram
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to='/privacidad'
+                  reloadDocument={true}
+                  className='text-gray-400 hover:text-white transition duration-300 ease-in-out transform hover:scale-125'>
+                  <span className='inline-block align-middle mr-2'>
+                    <BsTwitter />
+                  </span>
+                  Twitter
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to='/privacidad'
+                  reloadDocument={true}
+                  className='text-gray-400 hover:text-white transition duration-300 ease-in-out transform hover:scale-125'>
+                  <span className='inline-block align-middle mr-2'>
+                    <BsDiscord />
+                  </span>
+                  Discord
                 </NavLink>
               </li>
             </ul>
